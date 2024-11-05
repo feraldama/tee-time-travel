@@ -1,43 +1,36 @@
-# Tuiu Remesas
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Envía dinero a Paraguay fácilmente
+## Getting Started
 
-## Commandos
+First, run the development server:
 
-**Warnings**
-El uso de este paquete requería `PNPM` (requisito), puede instalarlo usando `npn i -g pnpm` y luego seguir las instrucciones.
-
-[Lisrta de Comandos](./docs/commands.md)
-
-## Env Variable
-
-Las variables env se almacenan en `.env` en la carpeta raíz (debe crearlas usted mismo)
-
-```env
-BASEPATH=
-NEXT_PUBLIC_API_URL=http://localhost:3000
-PORT=3000
-# API configuration
-BASE_URL_PORTAL=url_api
-# AWS S3 configuration
-AWS_ACCESS_KEY_ID=SDFGSFGDFGDFGDFGDFG
-AWS_SECRET_ACCESS_KEY=dsfsdfsdfsdgertgrtgergtrtgr
-AWS_REGION=us-east-1
-AWS_BUCKET_NAME=development-s3
-# Sentry configuration dev
-SENTRY_AUTH_TOKEN=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
-NEXT_PUBLIC_SENTRY_DSN=https://40758c81c2f14c18b3ed324b363bc274@o4507266281373696.ingest.us.sentry.io/4507266283143168
-# Firebase configuration
-FIREBASE_MEASUREMENT_ID=G-XXXXXXXX
-# Variables de entorno para la configuración de la autenticación de Access Control
-AUTH_URL_ACCESS_CONTROL=http://18.230.23.171:8080/identity/v1
-AUTH_CLIENT_ID=client-facetec
-AUTH_CLIENT_SECRET=4c6b3a730c9c498dae81272081a72710
-AUTH_APLICATION_ID=BNF
-AUTH_VERSION=1.0.0
-
-NEXTAUTH_SECRET=example-token
-# Variables de entorno para la configuración de la autenticación de Github
-AUTH_GITHUB_ID=Iv1.0.0
-AUTH_GITHUB_SECRET=Iv1.0.0
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
