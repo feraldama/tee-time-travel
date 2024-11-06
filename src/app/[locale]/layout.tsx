@@ -10,16 +10,16 @@ const gaId = process.env.FIREBASE_MEASUREMENT_ID || ''
 
 interface MainLayoutProps {
   children: React.ReactNode
-  params: { locale: string }
+  // params: { locale: string }
 }
 
-const LocaleLayout = async ({ children, params }: MainLayoutProps) => {
-  const { locale } = await params
-  const currentLocale = locale || siteConfig.lang
-  unstable_setRequestLocale(currentLocale)
+const LocaleLayout = ({ children }: MainLayoutProps) => {
+  // const { locale } = params
+  // const currentLocale = locale || siteConfig.lang
+  // unstable_setRequestLocale(currentLocale)
 
   return (
-    <html className='scroll-smooth' lang={currentLocale} suppressHydrationWarning>
+    <html className='scroll-smooth' suppressHydrationWarning>
       <body className={clsx('min-h-screen bg-background antialiased', inter.variable, roboto.variable)}>
         <Providers>
           {children}
