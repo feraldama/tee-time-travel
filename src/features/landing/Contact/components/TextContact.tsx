@@ -9,11 +9,11 @@ const TextContact: React.FC = () => {
       <p className='max-w-80 text-base md:text-3xl font-normal font-roboto text-black mt-6 xl:mt-10 text-left text-balance'>
         Envíanos tus consultas o sugerencias y te responderemos en la brevedad posible
       </p>
-      <div className='relative w-full h-48 mt-8 xl:mt-12 hidden xl:block'>
+      {/* <div className='relative w-full h-48 mt-8 xl:mt-12 hidden xl:block'>
         <div className='absolute bottom-4 left-1 top-48 w-24 h-auto z-10 bg-white'>
           <OrgullosamenteParaguayoImage />
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }

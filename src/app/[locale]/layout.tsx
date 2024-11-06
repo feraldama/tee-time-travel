@@ -13,12 +13,13 @@ interface MainLayoutProps {
   params: { locale: string }
 }
 
-const LocaleLayout = ({ children, params: { locale } }: MainLayoutProps) => {
+const LocaleLayout = async ({ children, params }: MainLayoutProps) => {
+  const { locale } = await params
   const currentLocale = locale || siteConfig.lang
   unstable_setRequestLocale(currentLocale)
 
   return (
-    <html className='scroll-smooth' lang={locale} suppressHydrationWarning>
+    <html className='scroll-smooth' lang={currentLocale} suppressHydrationWarning>
       <body className={clsx('min-h-screen bg-background antialiased', inter.variable, roboto.variable)}>
         <Providers>
           {children}

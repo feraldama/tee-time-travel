@@ -1,10 +1,10 @@
 import { useState, useCallback } from 'react'
 import Link from 'next/link'
-import { TuiuLogo, PersonIcon } from '@/components/icons'
+import { TuiuLogo, PersonIcon, TeeTimeLogo } from '@/components/icons'
 
 const navLinks = [
-  { href: '#send-money', text: 'Enviar dinero' },
-  { href: '#how-it-works', text: '¿Cómo funciona?' },
+  { href: '#send-money', text: 'Bienvenido' },
+  { href: '#how-it-works', text: 'Nuestros Servicios' },
   { href: '#benefits', text: 'Beneficios' },
   { href: '#about-us', text: 'Nosotros' },
   { href: '#contact-us', text: 'Contáctanos' }
@@ -78,7 +78,7 @@ const HeaderComponent: React.FC = () => {
             <div className='flex-grow flex justify-center xl:justify-start'>
               <div className='w-28'>
                 <a href='/'>
-                  <TuiuLogo />
+                  <TeeTimeLogo />
                 </a>
               </div>
             </div>

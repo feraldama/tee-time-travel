@@ -5,7 +5,7 @@ import { ArrowUpImage } from './icons'
 
 const ScrollToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false)
-  const [buttonBottom, setButtonBottom] = useState(100)
+  const [buttonBottom, setButtonBottom] = useState(25)
   const footerRef = useRef<HTMLDivElement | null>(null)
 
   const handleScroll = useCallback(() => {
@@ -18,7 +18,7 @@ const ScrollToTopButton: React.FC = () => {
       const footerTop = footerRef.current.getBoundingClientRect().top
       const offset = footerTop - windowHeight
 
-      setButtonBottom(offset < 0 ? -offset + 20 : 100)
+      setButtonBottom(offset < 0 ? -offset + 20 : 25)
     }
   }, [])
 

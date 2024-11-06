@@ -25,7 +25,7 @@ const ServiceCard: React.FC<{ icon: React.ReactNode; description: string }> = ({
 
 export default function Services() {
   return (
-    <section className='my-20 px-4 sm:px-6 lg:px-8' aria-labelledby='benefits-title'>
+    <section className='px-4 pt-12 lg:px-8 lg:h-screen' aria-labelledby='benefits-title'>
       <h2
         id='benefits-title'
         className='text-3xl sm:text-5xl text-tuiu-green-300 font-bold font-inter text-center mb-8'

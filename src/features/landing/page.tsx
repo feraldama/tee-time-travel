@@ -22,9 +22,9 @@ const LandingView = () => {
         <HeaderComponent />
       </header>
       <main className='font-roboto'>
-        <section id='hero'>
+        {/* <section id='hero'>
           <Hero />
-        </section>
+        </section> */}
         <section id='send-money'>
           <SendMoney />
         </section>
@@ -46,7 +46,7 @@ const LandingView = () => {
         <section id='frequent-questions'>
           <FrequentQuestions />
         </section>
-        <div className='my-12 h-0.5 bg-tuiu-green-300' aria-hidden='true'></div>
+        {/* <div className='my-12 h-0.5 bg-tuiu-green-300' aria-hidden='true'></div> */}
         <section id='contact-us'>
           <Contact />
         </section>

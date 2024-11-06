@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
   icons: {
-    icon: '/itti.ico'
+    icon: '/favicon.ico'
   }
 }
 

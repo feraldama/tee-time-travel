@@ -15,8 +15,6 @@ export const siteConfig = {
     }
   ],
   links: {
-    github: 'https://github.com/ittidigital/reacttemplate',
-    docs: 'http://localhost:6006',
-    itti: 'https://www.itti.digital'
+    github: 'https://github.com/feraldama/tee-time-travel.git'
   }
 }

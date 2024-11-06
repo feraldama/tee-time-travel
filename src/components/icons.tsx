@@ -32,6 +32,7 @@ import Document from '/public/assets/icons/document.svg'
 import CreditCard from '/public/assets/icons/credit-card.svg'
 import ArrowUpUnderline from '/public/assets/icons/arrow-up-underline.svg'
 import ProfilePicture from '/public/assets/images/profile-picture.png'
+import TeeTime from '/public/assets/images/logoSinFondo.png'
 
 export const ProfilePictureIcon = () => <Image src={ProfilePicture} alt='Profile Picture' priority />
 
@@ -60,6 +61,8 @@ export const ArrowDownIcon = () => (
     }}
   />
 )
+
+export const TeeTimeLogo = () => <Image src={TeeTime} alt='Logo' width={50} />
 
 export const ArrowDownIconSVG = () => <Image src={ArrowDownSVG} alt='Arrow Down' />
 
