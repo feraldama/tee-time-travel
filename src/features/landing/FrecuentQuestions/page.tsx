@@ -57,7 +57,7 @@ export default function Advantages() {
             experimentados que desean desafiarse en los mejores campos del mundo. También organizamos viajes para
             grupos, eventos corporativos y retiros de golf.
           </p>
-          <div className='absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-green-200 rounded-full p-4'>
+          <div className='absolute top-0 right-3 transform translate-x-1/2 -translate-y-1/2 bg-green-200 rounded-full p-4'>
             <Image src={icon} alt='Decorative Icon' width={24} height={24} />
           </div>
         </div>
