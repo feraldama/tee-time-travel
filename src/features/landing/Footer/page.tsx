@@ -11,7 +11,7 @@ import {
 } from '../../../components/icons'
 const Footer: React.FC = () => {
   return (
-    <section className='bg-tuiu-green-300 text-white py-16'>
+    <section className='bg-tuiu-green-500 text-white py-16'>
       <div className='max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='mx-4 sm:mx-8 md:mx-16 lg:mx-32'>
           <div className='flex flex-row justify-between gap-4'>

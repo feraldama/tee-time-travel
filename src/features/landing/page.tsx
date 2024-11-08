@@ -31,16 +31,16 @@ const LandingView = () => {
         <section id='how-it-works'>
           <HowItWorks />
         </section>
-        <section>
+        {/* <section>
           <ShippingWithdrawal />
         </section>
         <section title='statistics'>
           <Statistics />
-        </section>
+        </section> */}
         <section id='benefits'>
           <Services />
         </section>
-        <section>
+        <section id='destination'>
           <SuccessStories />
         </section>
         <section id='frequent-questions'>

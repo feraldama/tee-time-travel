@@ -1,4 +1,8 @@
-import { CurrencyExchange } from '@/components/icons'
+import image1 from '/public/assets/images/mision1.jpeg'
+import image2 from '/public/assets/images/mision2.jpeg'
+import image3 from '/public/assets/images/mision3.jpeg'
+import image4 from '/public/assets/images/mision4.jpeg'
+import Image from 'next/image'
 
 export default function HowItWorks() {
   const steps = [
@@ -33,46 +37,43 @@ export default function HowItWorks() {
   ]
 
   return (
-    <section className='w-full py-16 bg-tuiu-green-100'>
-      {/* rounded-3xl */}
+    <section className='w-full py-12 lg:p-16 bg-tuiu-gray-50'>
       <div className='container mx-auto px-4'>
-        <div className='flex flex-col md:flex-row items-stretch justify-between'>
-          <div className='w-full md:w-1/2 order-1 md:order-1 flex flex-col items-center justify-center'>
-            <h2 className='text-5xl font-bold text-tuiu-green-300 mb-8 text-center hidden md:block'>
-              Nuestros Servicios
-            </h2>
-            {/* <div className='md:px-8 hidden md:block py-2'>
-              <CurrencyExchange className='w-full h-auto md:max-w-sm' />
-            </div> */}
+        <div className='flex-row items-stretch justify-between'>
+          <div className='w-full text-tuiu-green-300'>
+            <h2 className='text-2xl font-bold mb-3'>¿Quiénes somos?</h2>
+            <p className='text-xl md:text-xl font-roboto md:font-inter font-normal mb-5'>
+              Time tee Travel es una agencia de viajes dedicada a los apasionados del golf. Ofrecemos experiencias
+              personalizadas para jugadores de todos los niveles, con la oportunidad de disfrutar de los mejores campos
+              de golf en destinos espectaculares alrededor del mundo.
+            </p>
           </div>
-          <div className='w-full md:w-1/2 order-2 md:order-2 flex flex-col mt-8 md:mt-0'>
-            <h2 className='text-[32px] font-bold text-tuiu-green-300 mb-8 text-center md:hidden'>Nuestros Servicios</h2>
-            <div className='relative flex-grow'>
-              <div className='absolute left-5 xl:left-7 md:left-7 top-0 h-full w-1.5 bg-white' aria-hidden='true'></div>
-              <ul className='relative'>
-                {steps.map((step, index) => (
-                  <li key={index} className='mb-8'>
-                    <div className='flex items-center'>
-                      <div className='z-10 flex items-center justify-center w-12 h-12 xl:w-16 xl:h-16 rounded-full bg-white flex-shrink-0'>
-                        <span className='text-tuiu-green-300 font-black text-xl xl:text-[34px]'>{index + 1}</span>
-                      </div>
-                      <p className='ml-6 text-lg md:text-xl font-roboto md:font-inter font-normal'>{step}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            {/* <p className='text-5xl font-bold text-balance text-tuiu-green-300 mt-8 hidden md:block'>
-              ¡LISTO y tu dinero llega a Paraguay!
-            </p> */}
+          <div className='w-full text-tuiu-green-300'>
+            <h2 className='text-2xl font-bold mb-3'>Nuestra misión</h2>
+            <p className='text-xl md:text-xl font-roboto md:font-inter font-normal'>
+              Proporcionar a los amantes del golf experiencias de viaje inolvidables, combinando la práctica de su
+              deporte favorito con el descubrimiento de paisajes increíbles, alojamientos de lujo, y una atención al
+              detalle sin igual.
+            </p>
           </div>
         </div>
-        {/* <p className='text-4xl font-bold text-balance text-tuiu-green-300 mt-8 text-center md:hidden'>
-          ¡LISTO y tu dinero llega a Paraguay!
-        </p>
-        <div className='mt-8 md:hidden flex justify-center py-2'>
-          <CurrencyExchange className='w-full xl:max-w-[213px] max-w-36 h-auto' />
-        </div> */}
+
+        {/* Sección de imágenes */}
+        <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8'>
+          <div className='rounded-lg overflow-hidden'>
+            {/* <Image src={image1} alt='Golf image 1' layout='responsive' objectFit='cover' /> */}
+            <Image src={image1} alt='Golf image 1' style={{ height: '100%' }} />
+          </div>
+          <div className='rounded-lg overflow-hidden'>
+            <Image src={image2} alt='Golf image 2' style={{ height: '100%' }} />
+          </div>
+          <div className='rounded-lg overflow-hidden'>
+            <Image src={image3} alt='Golf image 3' style={{ height: '100%' }} />
+          </div>
+          <div className='rounded-lg overflow-hidden'>
+            <Image src={image4} alt='Golf image 4' style={{ height: '100%' }} />
+          </div>
+        </div>
       </div>
     </section>
   )

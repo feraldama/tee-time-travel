@@ -1,72 +1,53 @@
-'use client'
-
-import React from 'react'
 import Image from 'next/image'
-import flagImageSpain from '../../../../public/assets/images/flags/spain.png'
-import flagImageSweden from '../../../../public/assets/images/flags/sweden.png'
-import flagImageFrance from '../../../../public/assets/images/flags/france.svg'
-import profile1Image from '../../../../public/assets/images/profile/profile1.png'
-import profile2Image from '../../../../public/assets/images/profile/profile2.png'
-import profile3Image from '../../../../public/assets/images/profile/profile3.png'
+import europeImage from '/public/assets/images/europe.jpeg'
+import asiaPacificImage from '/public/assets/images/asia.jpeg'
+import northAmericaImage from '/public/assets/images/northamerica.jpeg'
+import caribbeanImage from '/public/assets/images/caribe.jpeg'
 
-const stories = [
-  'David pudo pagar los estudios médicos de sus padres desde España.',
-  'Elene envía dinero a su hermana todos los meses desde Suecia.',
-  'Lidia paga los estudios de sus hijos desde Francia.'
-]
-
-const profileImages = [profile1Image, profile2Image, profile3Image]
-const flagImages = [flagImageSpain, flagImageSweden, flagImageFrance]
-
-const highlightPhrases = [
-  'pagar los estudios médicos de sus padres',
-  'envía dinero a su hermana',
-  'paga los estudios de sus hijos',
-  'efectúa los pagos de sus hijos'
-]
-
-const renderStoryCard = (story: string, index: number) => {
-  const highlightedStory = story.replace(
-    highlightPhrases[index % highlightPhrases.length],
-    match => `<span class="font-bold text-tuiu-green-300">${match}</span>`
-  )
+export default function Destinations() {
+  const destinations = [
+    {
+      title: 'Europa',
+      description:
+        'Explora los campos legendarios de Escocia, Irlanda, España, y Portugal, donde la historia del golf se fusiona con la belleza de los paisajes.',
+      image: europeImage
+    },
+    {
+      title: 'Norteamérica',
+      description:
+        'Descubre los impresionantes campos de golf en Estados Unidos y Canadá, desde Pebble Beach en California hasta los verdes valles de Vancouver.',
+      image: northAmericaImage
+    },
+    {
+      title: 'Caribe y Centroamérica',
+      description:
+        'Relájate y disfruta del golf con vistas paradisíacas en destinos como República Dominicana, México y Costa Rica.',
+      image: caribbeanImage
+    },
+    {
+      title: 'Asia y Pacífico',
+      description:
+        'Vive experiencias exóticas jugando en campos únicos de Tailandia, Nueva Zelanda, Australia y Japón.',
+      image: asiaPacificImage
+    }
+  ]
 
   return (
-    <div
-      key={index}
-      className='min-w-[350px] max-w-[200px] h-[250px] mx-[20px] bg-white rounded-[29px] shadow-md relative flex flex-col justify-start mt-[50px]'
-    >
-      <div className='absolute top-[-50px] left-[40px] z-10 w-[100px] h-[100px] rounded-full overflow-hidden'>
-        <Image
-          src={profileImages[index % profileImages.length]}
-          alt={`Profile ${index + 1}`}
-          fill
-          style={{ objectFit: 'cover' }}
-        />
-      </div>
-      <div className='absolute top-[20px] right-[30px] w-[60.46px] h-[40.21px]'>
-        <Image
-          src={flagImages[index % flagImages.length]}
-          alt={`Flag ${index + 1}`}
-          fill
-          style={{ objectFit: 'contain' }}
-        />
-      </div>
-      <div className='w-full h-[164px] font-roboto font-normal text-[30px] leading-[36px] text-[#010101] text-left mt-[60px] px-[20px]'>
-        <span dangerouslySetInnerHTML={{ __html: highlightedStory }} />
-      </div>
-    </div>
-  )
-}
-
-export default function SuccessStories() {
-  return (
-    <section className='bg-tuiu-green-100 max-w-[2000px] min-h-[688.58px] flex flex-col items-center py-20'>
-      <h2 className='font-bold text-3xl xl:text-[51px] mb-[50px] text-[#4095DB] font-inter'>Casos de éxito</h2>
-
-      <div className='relative overflow-hidden w-full h-[350px]'>
-        <div className='flex animate-scroll'>
-          {[...stories, ...stories].map((story, index) => renderStoryCard(story, index))}
+    <section className='w-full py-16 bg-tuiu-gray-50'>
+      <div className='container mx-auto px-4'>
+        <h2 className='text-3xl font-bold text-center text-tuiu-green-300 mb-8'>Nuestros destinos</h2>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:mx-8'>
+          {destinations.map((destination, index) => (
+            <div key={index} className='bg-white rounded-lg shadow overflow-hidden'>
+              <div className='relative w-full h-48'>
+                <Image src={destination.image} alt={destination.title} layout='fill' objectFit='cover' />
+              </div>
+              <div className='p-4 bg-tuiu-green-300 text-white'>
+                <h3 className='text-xl font-semibold mb-2'>{destination.title}</h3>
+                <p className='text-sm'>{destination.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

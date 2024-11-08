@@ -1,36 +1,67 @@
-import React from 'react'
-import Accordion from '@components/accordion'
+import Image from 'next/image'
+import golfImage from '/public/assets/images/ventajasImagen.jpeg'
+import icon from '/public/assets/icons/check.svg'
 
-const FAQ_ITEMS = [
-  {
-    question: '¿Hay límites en envíos?',
-    answer: 'No hay límites en montos de envíos.'
-  },
-  {
-    question: '¿Cómo retira un envío el receptor?',
-    answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-  },
-  {
-    question: '¿Es Seguro?',
-    answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-  }
-]
+export default function Advantages() {
+  const advantages = [
+    {
+      title: 'Atención personalizada:',
+      description:
+        'Tu guía será un profesional del golf, que os acompañará, asesorará y enseñará durante toda vuestra estancia. Nuestros especialistas en viajes de golf trabajan estrechamente con cada cliente para entender sus preferencias y crear la experiencia perfecta.'
+    },
+    {
+      title: 'Acceso a campos exclusivos:',
+      description:
+        'Colaboramos con los campos más prestigiosos y exclusivos del mundo, garantizando acceso preferencial para nuestros clientes.'
+    },
+    {
+      title: 'Alojamientos de lujo:',
+      description:
+        'Nos asociamos con los mejores hoteles y resorts para ofrecer estancias que combinan confort, elegancia y proximidad a los campos de golf.'
+    },
+    {
+      title: 'Flexibilidad y comodidad:',
+      description: 'Nos encargamos de toda la logística durante el viaje, desde transporte, alquiler de palos, etc.'
+    }
+  ]
 
-const FrequentQuestions: React.FC = () => {
   return (
-    <section className='py-12 sm:py-16 md:py-20 lg:py-24'>
-      <div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl '>
-        <h1 className='text-4xl xl:text-5xl text-center font-bold font-roboto text-tuiu-green-300 mb-6 sm:mb-8 md:mb-10 lg:mb-12'>
-          Preguntas Frecuentes
-        </h1>
-        <div className='font-roboto justify-center flex'>
-          <Accordion items={FAQ_ITEMS} />
+    <section className='w-full py-12 lg:p-12 bg-white'>
+      <div className='container mx-auto px-4'>
+        {/* Ventajas de viajar */}
+        <h2 className='text-3xl font-bold text-center text-tuiu-green-300 mb-8'>
+          Ventajas de viajar con Travel Tee Time
+        </h2>
+        <div className='flex flex-col lg:flex-row items-center'>
+          <div className='w-full lg:w-1/2 space-y-6'>
+            {advantages.map((advantage, index) => (
+              <div key={index} className='flex items-start'>
+                <Image src={icon} alt='Icono' width={30} height={30} className='mr-4' />
+                <div>
+                  <h3 className='text-lg font-semibold text-tuiu-green-300'>{advantage.title}</h3>
+                  <p className='text-tuiu-green-700'>{advantage.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className='w-full lg:w-1/2 mt-8 lg:mt-0 rounded-lg overflow-hidden'>
+            <Image src={golfImage} alt='Golf Image' className='w-full h-auto' />
+          </div>
+        </div>
+
+        {/* Nuestros clientes */}
+        <div className='relative bg-tuiu-green-300 text-white rounded-2xl p-8 mt-16'>
+          <h2 className='text-3xl font-bold mb-4'>Nuestros clientes</h2>
+          <p className='text-lg'>
+            Atendemos tanto a jugadores aficionados que buscan una experiencia relajante como a golfistas más
+            experimentados que desean desafiarse en los mejores campos del mundo. También organizamos viajes para
+            grupos, eventos corporativos y retiros de golf.
+          </p>
+          <div className='absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-green-200 rounded-full p-4'>
+            <Image src={icon} alt='Decorative Icon' width={24} height={24} />
+          </div>
         </div>
       </div>
     </section>
   )
 }
-
-export default FrequentQuestions

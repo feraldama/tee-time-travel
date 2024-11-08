@@ -4,9 +4,9 @@ import { TuiuLogo, PersonIcon, TeeTimeLogo } from '@/components/icons'
 
 const navLinks = [
   { href: '#send-money', text: 'Bienvenido' },
-  { href: '#how-it-works', text: 'Nuestros Servicios' },
-  { href: '#benefits', text: 'Beneficios' },
-  { href: '#about-us', text: 'Nosotros' },
+  { href: '#how-it-works', text: 'Quienes somos' },
+  { href: '#benefits', text: 'Nuestros servicios' },
+  { href: '#destination', text: 'Nuestros destinos' },
   { href: '#contact-us', text: 'Contáctanos' }
 ]
 
@@ -16,7 +16,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const NavLinks = () => (
-  <ul className='flex flex-col xl:flex-row xl:space-x-8'>
+  <ul className='flex flex-col xl:flex-row xl:space-x-8 text-right'>
     {navLinks.map(({ href, text }) => (
       <li key={href}>
         <Link
@@ -49,10 +49,17 @@ const HeaderComponent: React.FC = () => {
   const toggleMenu = useCallback(() => setMenuOpen(prev => !prev), [])
 
   return (
-    <nav className='bg-tuiu-green-100 text-tuiu-green-300 rounded-b-3xl font-roboto font-medium text-base'>
+    <nav className='bg-tuiu-green-500 text-tuiu-gray-100 font-roboto font-medium text-base'>
       <div className='container mx-auto px-4 md:px-8 lg:px-20 max-w-screen-2xl py-4'>
         <div className='flex flex-wrap items-center justify-between'>
           <div className='flex items-center w-full xl:w-auto justify-between xl:justify-start'>
+            <div className='flex-grow flex justify-center xl:justify-start'>
+              <div className='w-48'>
+                <a href='/'>
+                  <TeeTimeLogo />
+                </a>
+              </div>
+            </div>
             <button
               onClick={toggleMenu}
               className='p-2 xl:hidden focus:outline-none focus:ring-2 focus:ring-tuiu-green-300 rounded'
@@ -75,34 +82,27 @@ const HeaderComponent: React.FC = () => {
                 />
               </svg>
             </button>
-            <div className='flex-grow flex justify-center xl:justify-start'>
-              <div className='w-28'>
-                <a href='/'>
-                  <TeeTimeLogo />
-                </a>
-              </div>
-            </div>
-            <div className='xl:hidden'>
+            {/* <div className='xl:hidden'>
               <div className='w-[42px] h-[42px] bg-tuiu-green-300 rounded-full flex items-center justify-center'>
                 <Link href='/login'>
                   <PersonIcon className='w-6 h-6 text-white' />
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className='hidden xl:flex xl:items-center xl:space-x-8'>
             <NavLinks />
           </div>
 
-          <div className='hidden xl:flex xl:space-x-3'>
+          {/* <div className='hidden xl:flex xl:space-x-3'>
             <Link href='/register'>
               <Button primary>Registrarse</Button>
             </Link>
             <Link href='/login'>
               <Button>Iniciá sesión</Button>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
 
